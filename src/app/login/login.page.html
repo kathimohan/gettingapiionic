@@ -1,0 +1,18 @@
+
+<br/>
+<ion-item style="border-radius: 50px;">
+  <ion-icon name="person-outline"  slot="start" style="margin: 8px;"></ion-icon>
+  <ion-input style="background: white;height: 51px;" [(ngModel)]="user1.username"  type="text" placeholder="Enter your username" required></ion-input> <br/>
+</ion-item><br/>
+<ion-item style="border-radius: 50px;">
+<ion-icon name="lock-open-outline" slot="start" style="margin: 8px;"></ion-icon>
+
+    <ion-input  style="background: white;height: 51px;" [(ngModel)]="user1.password" [type]="isTextFieldType ? 'text' : 'password'"   placeholder="Enter your password">
+    </ion-input>
+
+      <ion-icon
+        [name]="isTextFieldType ? 'eye-off' : 'eye'" (click)="togglePasswordFieldType()"
+      >
+  </ion-icon>
+</ion-item><br/>
+<div style="text-align: center;"><ion-button color="success" (click)="save(user1)">Sign In </ion-button></div><br/>
